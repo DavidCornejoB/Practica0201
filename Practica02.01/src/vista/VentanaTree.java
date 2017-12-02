@@ -55,7 +55,7 @@ public class VentanaTree extends JInternalFrame {
     }
 
     public void cargarArbol(File[] lista, int i, DefaultMutableTreeNode nodoAux) {
-        try{
+
         for (File a : lista) {
             System.out.println("" + a.getPath());
             this.hijo = new DefaultMutableTreeNode(a.getName());
@@ -65,10 +65,7 @@ public class VentanaTree extends JInternalFrame {
             }
             i++;
         }
-        }catch(NullPointerException e) {
-            
-            JOptionPane.showMessageDialog(this, "Direccion mal ingresada", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+
     }
 
     public DefaultTreeModel getModeloTree() {
